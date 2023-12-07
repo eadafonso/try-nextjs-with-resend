@@ -37,9 +37,14 @@ export default function SendEmail() {
         className="bg-blue-700 flex items-center justify-center self-end  mt-4 px-4 py-2 rounded text-md"
         onClick={handleSubmit}
       >
-        {loading === true ? "Enviar..." : "Enviar"}
-
-        <SendHorizonal size={14} className="ml-2 mt-1" />
+        {loading === true ? (
+          "Enviar..."
+        ) : (
+          <>
+            Enviar
+            <SendHorizonal size={14} className="ml-2 mt-1" />
+          </>
+        )}
       </button>
     </>
   );
